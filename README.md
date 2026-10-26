@@ -214,15 +214,14 @@ El desinstalador pide confirmación y muestra un resumen de todo lo que va a bor
 
 ## Capturas
 
-> (Sustituye estas rutas por capturas reales cuando las tengas. Formato sugerido: PNG, 1920×1080, tema oscuro y claro.)
 
 | Ventana principal | Expresiones |
 |---|---|
-| `docs/screenshots/main-dark.png` | `docs/screenshots/expressions.png` |
+| <img src="docs/screenshots/main-dark.png" width="420" alt="Ventana principal"/> | <img src="docs/screenshots/expressions.png" width="420" alt="Expresiones"/> |
 
 | Preferencias | Lexicones |
 |---|---|
-| `docs/screenshots/preferences.png` | `docs/screenshots/lexicon.png` |
+| <img src="docs/screenshots/preferences.png" width="420" alt="Preferencias"/> | <img src="docs/screenshots/lexicon.png" width="420" alt="Lexicones"/> |
 
 ---
 
