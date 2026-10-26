@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+# Lanzador de Linuquendo GUI
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+PROJECT_DIR="$(dirname "$SCRIPT_DIR")"
+export PYTHONPATH="$PROJECT_DIR:$PYTHONPATH"
+
+# IBus para teclas muertas (tildes, diéresis, etc.)
+export GTK_IM_MODULE=ibus
+
+# Optimizaciones de Wine (sin procesos persistentes)
+CONFIG_FILE="$HOME/.config/linuquendo/config.json"
+if [ -f "$CONFIG_FILE" ]; then
+    WINEPREFIX=$(python3 -c "import json; print(json.load(open('$CONFIG_FILE'))['wineprefix'])" 2>/dev/null)
+    if [ -n "$WINEPREFIX" ] && [ -d "$WINEPREFIX" ]; then
+        export WINEPREFIX
+        export WINEDEBUG=-all
+    fi
+fi
+
+python3 "$PROJECT_DIR/gui/main.py"
+
+# Al terminar la app, matar cualquier wineserver residual para no dejar nada en segundo plano
+if [ -n "$WINEPREFIX" ] && [ -d "$WINEPREFIX" ]; then
+    wineserver -k 2>/dev/null || true
+fi
