@@ -368,12 +368,13 @@ Linuquendo es software libre bajo la **GNU General Public License v3.0**. Consul
 
 ## 💖 Apoya el proyecto
 
-Linuquendo es y será siempre software libre. Si te resulta útil y quieres apoyar su desarrollo, puedes hacerlo por cualquiera de estas vías:
+Linuquendo es y será siempre software libre. Si te resulta útil y quieres apoyar su desarrollo, puedes invitarme a un café en Ko-fi. Para cualquier consulta, propuesta o simplemente para saludar, escríbeme por correo.
 
 <div align="center">
 
 [![Ko-fi](https://img.shields.io/badge/Ko--fi-Inv%C3%ADtame%20a%20un%20caf%C3%A9-FF5E5B?logo=ko-fi&logoColor=white)](https://ko-fi.com/thezeusplayer24)
-[![PayPal](https://img.shields.io/badge/PayPal-Donar-00457C?logo=paypal&logoColor=white)](mailto:thezeusplayer@protonmail.com)
+
+E-mail:thezeusplayer@protonmail.com)
 
 </div>
 

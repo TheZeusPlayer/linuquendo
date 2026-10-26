@@ -779,17 +779,22 @@ class LinuquendoWindow(Adw.ApplicationWindow):
             self.status_label.set_text("Error al exportar.")
 
     def on_about_clicked(self, *args):
-        # ── ICONO ── (usa el nuevo icono en lugar del genérico)
         about = Adw.AboutWindow(
-            transient_for=self, application_name="Linuquendo TTS",
+            transient_for=self,
+            application_name="Linuquendo TTS",
             application_icon="linuquendo",
-            developer_name="Comunidad Linuquendo", version="0.1.0",
-            website="https://github.com/tu-usuario/linuquendo",
-            issue_url="https://github.com/tu-usuario/linuquendo/issues",
+            developer_name="TheZeusPlayer",
+            version="0.1.0",
+            website="https://github.com/TheZeusPlayer/linuquendo",
+            issue_url="https://github.com/TheZeusPlayer/linuquendo/issues",
             license_type=Gtk.License.GPL_3_0,
-            comments="Un frontend moderno para el motor de Loquendo TTS en Linux.",
-            developers=["Tú", "Comunidad"],
+            comments="Un frontend moderno para el motor de Loquendo TTS en Linux.\n\n"
+                     "Desarrollado con asistencia de DeepSeek.",
+            developers=["TheZeusPlayer", "Comunidad Linuquendo"],
         )
+        # Enlaces de apoyo (mismos que el README)
+        about.add_link("Apoyar en Ko-fi", "https://ko-fi.com/thezeusplayer24")
+        about.add_link("Contacto por correo", "mailto:thezeusplayer@protonmail.com")
         about.present()
 
 
@@ -800,7 +805,6 @@ class LinuquendoApp(Adw.Application):
 
     def on_activate(self, app):
         # ── ICONO ── registra assets/icons en el tema de iconos de GTK
-        # Así el icono "linuquendo" se resuelve igual en modo dev y en instalado.
         assets_icons = os.path.abspath(
             os.path.join(os.path.dirname(__file__), '..', 'assets', 'icons')
         )
